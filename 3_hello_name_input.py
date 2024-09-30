@@ -1,5 +1,5 @@
 #
-# James
+# Gaukhar
 # Take name as an input then print Hello name
 #
 
