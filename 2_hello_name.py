@@ -1,5 +1,5 @@
 #
-# James
+# Gaukhar
 # Print Hello James
 #
 
@@ -8,4 +8,4 @@
 # 2. Process
 
 # 3. Output
-print('Hello James!')
+print('Hello Gaukhar!')
