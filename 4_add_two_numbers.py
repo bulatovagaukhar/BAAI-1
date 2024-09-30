@@ -1,5 +1,5 @@
 #
-# James
+# Gaukhar
 # Add two number then print the sum
 #
 
