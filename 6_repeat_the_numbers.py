@@ -1,23 +1,25 @@
 #
 # Gaukhar
-# Repeat the task 3 times
+# Repeat three times
 #
 
-i = 1
-while i < 4:
-    # 1. Input
-    n1 = input ('Number 1: ')
-    n2 = input ('Number 2: ')
+max_lap = 3 #Maximum number of repeatition
+curr_lap = 1
 
-# 2. Process
+while (curr_lap <= max_lap):
+        # 1. Input
+    n1 = int (input ('Number 1: '))
+    n2 = int (input ('Number 2: '))
 
-if int (n1) > int (n2):
-    bigger = int (n1)
-elif int(n1) < int(n2):
-    bigger = int(n2)
-else:
-    bigger = 'Same'
+    # 2. Process
+    if (n1 < n2):
+        bigger = n2
+    elif (n1 > n2):
+        bigger = n1
+    else:
+        bigger = 'Same'
 
-# 3. Output
-print (f'Bigger: {bigger}')
-i += 1
+    # 3. Output
+    print (f'Bigger number: {bigger}')
+
+    curr_lap += 1
