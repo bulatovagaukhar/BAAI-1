@@ -1,0 +1,19 @@
+---
+title: "Data Analysis"
+author: 'Gaukhar Bulatova'
+Institute: 'Tunghai'
+number-sections: true
+format: html
+---
+
+## Key Points
+
+- Data loading
+- Data inspection
+    - Structure
+    - Value
+- Data cleaning
+    - Dealing with missing data
+    - Detect outliers
+- Data transformation
+    - Encoding
