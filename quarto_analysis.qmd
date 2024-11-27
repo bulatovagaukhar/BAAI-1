@@ -1,9 +1,14 @@
 ---
-title: "Data Analysis"
+title: 'Data Analysis'
 author: 'Gaukhar Bulatova'
-Institute: 'Tunghai'
+Institute: 'Tunghai University'
 number-sections: true
-format: html
+toc: true
+execute: 
+  daemon: true
+format: 
+    html:
+        embed-resources: true
 ---
 
 ## Key Points
@@ -17,3 +22,102 @@ format: html
     - Detect outliers
 - Data transformation
     - Encoding
+
+## Load Dataset 
+
+Load dataset from CSV file into `df` using Pandas package.
+
+```{python}
+import pandas as pd
+df = pd.read_csv('customer_data.csv')
+```
+ 
+- Where is `customer_data.csv?`
+
+## Data Inspection
+
+- Structure
+    - Dimension of dataset
+    - Column data type
+- Value
+    - Missing value
+    - Outliers
+
+### Dimension of dataset
+
+- How many rows and columns?
+
+```{python}
+df.shape
+```
+
+### Column data type
+
+```{python}
+df.info ()
+```
+
+## Check first few rows
+
+```{python}
+df.head()
+```
+
+## Check  last few rows
+
+```{python}
+df.tail()
+```
+
+## Basic Statistics
+
+```{python}
+df.describe()
+```
+
+## Round to 2 decimal points
+```{python}
+df.describe().round(2)
+```
+
+## Dataset
+```{python}
+# echo: false 
+df. head (10)
+```
+## Visualisation
+```{python}
+import matplotlib.pylab as plt
+df['Age'].hist()
+plt.show()
+```
+## Correlation among columns
+```{python}
+df.plot.scatter(x = 'Age', y = 'Income')
+plt.show()
+# import seaborn as sns
+# sns.pairplot(df)
+```
+## Data Clearning 
+``` {python}
+df = df.drop_duplicates(subset='CustomerID')
+df.loc[(df['Age'] < 18) | (df['Age'] > 65), 'Age'] = np.nan
+```
+
+## Dealing with missing data 
+``` {python}
+df.loc[df['Age'].isna(), 'Age'] = df['Age'].median()
+df.loc[df['Income'].isna(), 'Income'] = df['Income'].mean()
+df = df.dropna(subset=['Gender'])
+```
+
+## Outlier Detection and treatment
+```{python}
+Q1 = df['Income'].quantile(0.25)
+Q3 = df['Income'].quantile(0.75)
+IQR = Q3 - Q1
+lower_bound = Q1 - 1.5 * IQR
+upper_bound = Q3 + 1.5 * IQR
+
+df.loc[df['Income'] > upper_bound, 'Income'] = upper_bound
+df.loc[df['Income'] < upper_bound, 'Income'] = lower_bound
