@@ -32,7 +32,7 @@ import pandas as pd
 df = pd.read_csv('customer_data.csv')
 ```
  
-- Where is `customer_data.csv?`
+- Where is `customer_data.csv`?
 
 ## Data Inspection
 
