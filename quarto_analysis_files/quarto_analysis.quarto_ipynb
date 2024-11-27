@@ -1,0 +1,95 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: 'Data Analysis'\n",
+        "author: 'Gaukhar Bulatova'\n",
+        "Institute: 'Tunghai University'\n",
+        "number-sections: true\n",
+        "toc: true\n",
+        "execute: \n",
+        "  daemon: true\n",
+        "format: \n",
+        "    html:\n",
+        "        embed-resources: true\n",
+        "---\n",
+        "\n",
+        "\n",
+        "## Key Points\n",
+        "\n",
+        "- Data loading\n",
+        "- Data inspection\n",
+        "    - Structure\n",
+        "    - Value\n",
+        "- Data cleaning\n",
+        "    - Dealing with missing data\n",
+        "    - Detect outliers\n",
+        "- Data transformation\n",
+        "    - Encoding\n",
+        "\n",
+        "## Load Dataset \n",
+        "\n",
+        "Load dataset from CSV file into `df` using Pandas package.\n"
+      ],
+      "id": "97afa9b8"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import pandas as pd\n",
+        "df = \n",
+        "pd.read_csv('customer_data.csv')"
+      ],
+      "id": "4409452b",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "- Where is `customer_data.csv`?\n",
+        "\n",
+        "## Data Inspection\n",
+        "\n",
+        "- Structure\n",
+        "    - Dimension of dataset\n",
+        "    - Column data type\n",
+        "- Value\n",
+        "    - Missing value\n",
+        "    - Outliers\n",
+        "\n",
+        "### Dimension of dataset\n",
+        "\n",
+        "- How many rows and columns?\n",
+        "\n",
+        "```"
+      ],
+      "id": "6000867d"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "df.shape"
+      ],
+      "id": "a849e6f1",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python313\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
